@@ -39,6 +39,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@dialektike/tossicat": "^0.7.0",
 		"apexcharts": "^3.52.0"
 	}
 }

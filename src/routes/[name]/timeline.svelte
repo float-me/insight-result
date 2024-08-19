@@ -37,7 +37,7 @@
 				{/if}
 
 				{#if !history.ganet && !history.spinel}
-					<p>보유 재화에는 변화가 없습니다.</p>
+					<p>-</p>
 				{/if}
 			</div>
 		</div>

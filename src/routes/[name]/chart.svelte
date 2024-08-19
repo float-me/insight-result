@@ -23,7 +23,6 @@
 		dataLabels: {
 			enabled: false
 		},
-		colors: ['#020617'],
 		stroke: {
 			lineCap: 'round',
 			curve: 'smooth'
@@ -38,29 +37,15 @@
 			axisBorder: {
 				show: false
 			},
-			labels: {
-				style: {
-					colors: '#616161',
-					fontSize: '12px',
-					fontFamily: 'inherit',
-					fontWeight: 400
-				}
-			},
 			categories: ['선발전', ...range(1, round + 1).map((n) => `${n}회전`)]
 		},
 		yaxis: {
-			labels: {
-				style: {
-					colors: '#616161',
-					fontSize: '12px',
-					fontFamily: 'inherit',
-					fontWeight: 400
-				}
-			}
+			max: Math.max(...series.data) + 1,
+			min: 0,
+			stepSize: 1
 		},
 		grid: {
 			show: true,
-			borderColor: '#dddddd',
 			strokeDashArray: 5,
 			xaxis: {
 				lines: {
@@ -77,6 +62,9 @@
 		},
 		tooltip: {
 			theme: 'dark'
+		},
+		theme: {
+			palette: 'palette7' // upto palette10
 		}
 	};
 
